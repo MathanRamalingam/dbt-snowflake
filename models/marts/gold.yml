@@ -1,0 +1,10 @@
+version: 2
+models:
+  - name: gold_test
+    description:  this is where we are summing the value for type of price we summed up 
+    columns:
+      - name : orderType
+        tests:
+          - not_null
+          - unique
+          
