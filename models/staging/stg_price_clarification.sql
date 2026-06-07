@@ -1,0 +1,30 @@
+
+select 
+VALUE:price_clarification_id::STRING AS price_clarification_id,
+  VALUE:payerId::STRING AS payerId,
+  VALUE:receiverId::STRING AS receiverId,
+  VALUE:customer_id::NUMBER AS customer_id,
+  VALUE:orderType::STRING AS orderType,
+  VALUE:order_id::STRING AS order_id,
+  VALUE:trip_id::STRING AS trip_id,
+  VALUE:pickupDate::TIMESTAMP_NTZ AS pickupDate,
+  VALUE:status::STRING AS status,
+  VALUE:payerPrice::FLOAT AS payerPrice,
+  VALUE:receiverPrice::FLOAT AS receiverPrice,
+  VALUE:currency::STRING AS currency,
+  VALUE:kilometer::FLOAT AS kilometer,
+  VALUE:class::STRING AS class,
+  VALUE:abandonedDate::STRING AS abandonedDate,
+  VALUE:invoiceId::STRING AS invoiceId,
+  VALUE:invoiceNumber::STRING AS invoiceNumber,
+  VALUE:abandonedBy_customerId::NUMBER AS abandonedBy_customerId,
+  VALUE:abandonedBy_customerName::STRING AS abandonedBy_customerName,
+  VALUE:abandonedBy_userId::STRING AS abandonedBy_userId,
+  VALUE:abandonedBy_userName::STRING AS abandonedBy_userName,
+  VALUE:no_of_pc_lines::NUMBER AS no_of_pc_lines,
+  VALUE:no_of_dynamic_cost_lines::NUMBER AS no_of_dynamic_cost_lines,
+  VALUE:deleted_flag::BOOLEAN AS deleted_flag,
+  VALUE:last_load::TIMESTAMP_NTZ AS last_load,
+  VALUE:last_updated::TIMESTAMP_NTZ AS last_updated
+from {{source ('snowf' , 'price_clarification')}}
+sample(100 rows)

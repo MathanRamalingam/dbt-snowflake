@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: snowf
+    database: BRIDGETRANSPORT
+    schema: RAW
+    tables:
+      - name: transportation_requests_header
+      - name: price_clarification
+      - name: trips_header
+      - name: trips_legs 
